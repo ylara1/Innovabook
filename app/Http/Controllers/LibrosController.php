@@ -50,7 +50,7 @@ class LibrosController extends Controller
         $capitulos = Capitulos::paginate();
         $comentarios = Comentario::where("Id_libro",'=',$Id_libro)->get();
         $lectores = User::where("Id_tipo",'=',2)->get();
-        if(Auth::user()->id ==1){
+        if(Auth::user()->Id_tipo ==1){
             return view('layouts.autor.vista_libro',compact('libros','capitulos','comentarios','lectores'));
         }else{
             return view('libros.detalles_libro',compact('libros','capitulos'));

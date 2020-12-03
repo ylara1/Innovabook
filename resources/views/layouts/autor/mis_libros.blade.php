@@ -40,6 +40,7 @@
                         <ul class="list-unstyled">
                             <li><a href="{{ url('/mis_libros') }}"><i class="zmdi zmdi-bookmark-outline zmdi-hc-fw"></i>&nbsp;&nbsp; Mis libros</a></li>
                             <li><a href="{{ url('/actualizar_perfil') }}"><i class="zmdi zmdi-bookmark-outline zmdi-hc-fw"></i>&nbsp;&nbsp; Actualizar perfil</a></li>
+                            <li><a href="{{ url('/donaciones') }}"><i class="zmdi zmdi-bookmark-outline zmdi-hc-fw"></i>&nbsp;&nbsp; Donaciones</a></li>
 
                         </ul>
                     </li>
