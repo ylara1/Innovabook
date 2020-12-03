@@ -33,10 +33,13 @@ class UserController extends Controller
             "mypassword"=>["required"],
             "password"=>["required"]
         ];
-        $validator = Validator::make($request->all(), $reglas);
+        $mensajes=[
+            "required"=>"Campo obligatorio"
+        ];
+        $validator = Validator::make($request->all(), $reglas, $mensajes);
         if ($validator->fails()) {
             # code...
-            return redirect('/actualizar_perfil')->withErrors($validator);
+            return redirect('/actualizar_perfil')->withErrors($validator)->withInput();
         } else{
             if (Hash::check($request->mypassword, Auth::user()->password)) {
                 # code...
@@ -53,6 +56,8 @@ class UserController extends Controller
                     return redirect('/');
                 }
                     
+            } else{
+                return redirect('/actualizar_perfil')->withErrors("Contraseña erronea");
             }
         }
     }

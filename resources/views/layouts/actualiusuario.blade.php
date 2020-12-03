@@ -209,7 +209,12 @@
                                                             <div class="clear"></div>
                                                             @if (session('exito'))
                                                                 <p class="alert-success">{{ session('exito') }}</p>
+                                                            @else
+                                                            <span class="invalid-feedback" role="alert">
+                                                                <strong>{{ $errors->first() }}</strong>
+                                                            </span>
                                                             @endif
+                                                            
                                                         </form>
                                                     </div>
                                                 </div>
