@@ -63,9 +63,11 @@ class CapituloController extends Controller
     {
         # code...
         $capitulos = Capitulos::find($Id_capitulo);
-        $autores = User::paginate(5);
+        $autores = User::find($Id_autor);
         $libros = Libros::where("Id_libro",'like',$capitulos->Id_libro)->first();
         return view('layouts.autor.vista_capitulo')->with("libros",$libros)->with("capitulos",$capitulos);
+        //$ruta_archivo = storage_path() + "documents/'.$autores->id.'/'.$libros->Id_libro.'/'.$capitulos->link_cap";
+        //$path = Storage::url("documents/'.$autores->id.'/'.$libros->Id_libro.'/'.$capitulos->link_cap");
     }
 
     
