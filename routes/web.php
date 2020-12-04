@@ -41,6 +41,7 @@ Route::group(['prefix' => 'admin'], function () {
     
     Route::post('/desbloquear_libro', 'ModController@desbloquear');
     Route::post('/bloquear_libro', 'ModController@bloquear');
+    Route::post('/registrar','ModController@create');
   });
     
   Route::group(['middleware' => 'admin'], function () {

@@ -121,7 +121,7 @@
         <div class="container-fluid">
             <div class="container-flat-form">
                 <div class="title-flat-form title-flat-blue">Registrar un nuevo moderador</div>
-                <form autocomplete="off" method="POST" action="{{ url('/admin/register') }}">
+                <form autocomplete="off" method="POST" action="{{ url('admin/registrar') }}">
                     @csrf
                     <div class="row">
                        <div class="col-xs-12 col-sm-8 col-sm-offset-2">

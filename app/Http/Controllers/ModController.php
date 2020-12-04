@@ -8,6 +8,7 @@ use App\Admin;
 use App\Capitulos;
 use App\Comentario;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class ModController extends Controller
 {
@@ -89,6 +90,20 @@ class ModController extends Controller
         $libros = Libros::where("Id_libro",'=', $capitulos->Id_libro)->first();
         $autores = User::where("id",'=',$libros['Id_user'])->first();
         return view('layouts.mod.vista_capitulo',compact('capitulos','libros','autores'));
+    }
+    protected function create(Request $request)
+    {
+        $admin = new Admin();
+        $admin->name =$request->input('name');
+        $admin->email = $request->input('email');
+        $admin->password = Hash::make($request->input('password'));
+        $admin->save();
+        /*Admin::create([
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'password' => Hash::make($request->input('password')),
+        ]);*/
+        return redirect('mod/nuevo_mod');
     }
 
 }
