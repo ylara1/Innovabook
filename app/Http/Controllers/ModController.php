@@ -54,7 +54,7 @@ class ModController extends Controller
         $libro = Libros::find($_POST["id"]);
         
         $libro->Estado = "Inactivo";
-        $libro->razon = $_POST["razon"];
+        $libro->Razon = $_POST["razon"];
         $libro->save();
         return redirect('admin/libros');
         echo"Libro Bloqueado";
