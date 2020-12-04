@@ -21,6 +21,14 @@
     <script src="/mod/js/bootstrap.min.js"></script>
     <script src="/mod/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="/mod/js/main.js"></script>
+    <script>
+        $(function(){
+           $('#login').click(function(){
+           $(this).next('#login-content').slideToggle();
+           $(this).toggleClass('active');          
+           });
+        });
+    </script>
 </head>
 <body>
     <div class="navbar-lateral full-reset">
@@ -121,6 +129,20 @@
                                     
                                                         <a href="{{ url('admin/libros/detalles/'.$l->Id_libro) }}" class="btn btn-info pull-right" style="margin-right: 10px;"><i class="zmdi zmdi-eye"></i></a>
                                                         
+                                                    </p>
+                                                    <p class="text-center pull-right">
+                                                        <nav class="acceder pull-right" >
+                                                            <button class="btn btn-danger" id="login" class="formClass" href="#" style="margin-right: 10px"><i class="zmdi zmdi-block"></i></button>
+                                                                <div id="login-content">
+                                                                    <form method="POST" action="{{ url('admin/bloquear_libro') }}">
+                                                                        @csrf
+                                                                        <strong>Razon del bloqueo:</strong>
+                                                                        <input type="hidden" name="id" value="{{ $l->Id_libro }}"> 
+                                                                        <input id="pass" type="text" name="razon" placeholder="Escribe la razón" required>
+                                                                        <button id="submit">Bloquear</button>
+                                                                    </form>
+                                                                </div>
+                                                        </nav> 
                                                     </p>
                                                 </div>
                                             </div>

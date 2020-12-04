@@ -65,7 +65,7 @@ class ModController extends Controller
         $libro = Libros::find($_POST["id"]);
         
         $libro->Estado = "Activo";
-        $libro->razon = null;
+        $libro->Razon = null;
         $libro->save();
         return redirect('admin/inactivos');
         echo"Libro Desbloqueado";

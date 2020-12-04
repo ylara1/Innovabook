@@ -83,7 +83,7 @@ class RegisterController extends Controller
 
         if (Auth::guard('web')->check()) {
             # code...
-            if ($user->Id_tipo == 1) {
+            if (auth()->user()->Id_tipo == 1) {
                 # code...
                 return redirect()->route('autor.dashboard');
             } else {
