@@ -78,10 +78,20 @@
                    <img src="assets/img/user01.png" alt="user-picture" class="img-responsive img-circle center-box">
                 </figure>
                 <li style="color:#fff; cursor:default;">
-                    <span class="all-tittles">{{ Auth::user()->name }}</span>
+                    <span class="all-tittles">{{Auth::guard('admin')->user()->name }}</span>
                 </li>
-                <li  class="tooltips-general exit-system-button" data-href="index.html" data-placement="bottom" title="Salir del sistema">
-                    <i class="zmdi zmdi-power"></i>
+                <li  class="tooltips-general exit-system-button" data-placement="bottom" title="Salir del sistema">
+                    <i class="zmdi zmdi-power">
+                        <a href="{{ url('/admin/logout') }}"
+                        onclick="event.preventDefault();
+                                 document.getElementById('logout-form').submit();">
+                        Logout
+                        </a>
+                        <form id="logout-form" action="{{ url('/admin/logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                
+                    </i>
                 </li>
                 <li  class="tooltips-general search-book-button" data-href="searchbook.html" data-placement="bottom" title="Buscar libro">
                     <i class="zmdi zmdi-search"></i>

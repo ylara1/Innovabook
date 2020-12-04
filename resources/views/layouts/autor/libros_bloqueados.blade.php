@@ -93,12 +93,12 @@
         </nav>
         <div class="container">
             <div class="page-header">
-              <h1 class="all-tittles">Innovabook <small>Mis libros</small></h1>
+              <h1 class="all-tittles">Innovabook <small>Libros bloqueados</small></h1>
             </div>
         </div>
          
         <div class="container-fluid" style="margin: 0 0 50px 0;">
-            <h2 class="text-center" style="margin: 0 0 25px 0;">Mis libros</h2>
+            <h2 class="text-center" style="margin: 0 0 25px 0;">Libros bloqueados</h2>
         </div>
         <div class="container-fluid">
             @if (count($libros))

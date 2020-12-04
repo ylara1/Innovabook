@@ -80,14 +80,7 @@
                                             <a data-toggle="dropdown" class="dropdown-toggle disabled" href="{{ url('libros') }}">libros</a>
                                             
                                         </li>
-                                        <li class="dropdown">
-                                            <a data-toggle="dropdown" class="dropdown-toggle disabled" href="">categorias</a>
-                                         
-                                        </li>
-                                        <li class="dropdown">
-                                            <a data-toggle="dropdown" class="dropdown-toggle disabled" href="">más papulares</a>
-                                         
-                                        </li>
+                                        
                                       
                                 </div>
                             </div>

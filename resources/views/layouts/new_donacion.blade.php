@@ -84,9 +84,7 @@
                                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                                             @csrf
                                                         </form>
-                                                        @if (  auth()->user()->Id_tipo ==1 )
-                                                        <a class="dropdown-item" href="{{ url('libros/mis_libros') }}">Mis libros</a>
-                                                        @endif
+                                                        
                                                         <a href="{{ url('/actualizar_perfil') }}" class="dropdown-item">Actualizar perfil</a>
 
                                                     </div>
@@ -110,14 +108,7 @@
                                         <a data-toggle="dropdown" class="dropdown-toggle disabled" href="{{ url('libros') }}">Libros</a>
                                      
                                     </li>
-                                    <li class="dropdown">
-                                        <a data-toggle="dropdown" class="dropdown-toggle disabled" href="">categorias</a>
-                                     
-                                    </li>
-                                    <li class="dropdown">
-                                        <a data-toggle="dropdown" class="dropdown-toggle disabled" href="">más papulares</a>
-                                     
-                                    </li>
+                                    
                                    
                         </div>
                     </div>

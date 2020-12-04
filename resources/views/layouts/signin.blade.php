@@ -83,7 +83,7 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="topbar-links">
-                                                <a href="signin.html"><i class="fa fa-lock"></i>Iniciar Sesion / Registrarse</a>
+                                                <a href="{{ url('login') }}"><i class="fa fa-lock"></i>Iniciar Sesion / Registrarse</a>
                                                 
                                             </div>
                                         </div>
@@ -92,17 +92,14 @@
                                 <div class="navbar-collapse hidden-sm hidden-xs">
                                     <ul class="nav navbar-nav">
                                         <li class="dropdown active">
-                                            <a data-toggle="dropdown" class="dropdown-toggle disabled" href="index.html">Inicio</a>
+                                            <a data-toggle="dropdown" class="dropdown-toggle disabled" href="{{ url('/') }}">Inicio</a>
                                           
                                         </li>
                                         <li class="dropdown">
                                             <a data-toggle="dropdown" class="dropdown-toggle disabled" href="{{ url('libros') }}">libros</a>
                                             
                                         </li>
-                                        <li class="dropdown">
-                                            <a data-toggle="dropdown" class="dropdown-toggle disabled" href="">categorias</a>
-                                         
-                                        </li>
+                                        
                                         
                                       
                                 </div>
