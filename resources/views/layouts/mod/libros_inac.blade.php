@@ -125,7 +125,7 @@
                                 <div class="pull-left">
                                     <strong>Autor: </strong>{{ $au->name }}<br>
                                     <strong>Año: </strong>{{ $l->Fecha_ini }}<br>
-                                    <strong>Razón bloqueo: </strong>{{ $l->razon }}<br>
+                                    <strong>Razón bloqueo: </strong>{{ $l->Razon }}<br>
                                 </div>
                                 
                                 <p class="text-center pull-right">
